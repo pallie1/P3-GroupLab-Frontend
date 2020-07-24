@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import axios from 'axios';
-import "./DeleteProfile.css";
 import { DataContext } from '../../../App';
 import apiUrl from '../../../apiConfig';
+import "./DeleteProfile.scss";
 
 const DeleteProfile = () => {
   const dataContext = useContext(DataContext);
@@ -47,7 +47,7 @@ const DeleteProfile = () => {
         <h1>This will be permanent.</h1>
         <button onClick={deleteOnClick} >Delete Profile</button>
         <Link to='/editprofile'>
-          <button>Cancel</button>
+          <button >Cancel</button>
         </Link>
       </div>
     )
