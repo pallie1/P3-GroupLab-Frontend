@@ -1,4 +1,5 @@
 import React from "react";
+import "./TeacherForm.scss";
 
 export default function TeacherForm({
   handleTeacherChange,
@@ -73,7 +74,7 @@ export default function TeacherForm({
           name="teachingStyle"
           value={teacherInput.teachingStyle}
         />
-        <input type="submit" />
+        <input type="submit" id='submit-button-wrapper' />
       </form>
     </div>
   );

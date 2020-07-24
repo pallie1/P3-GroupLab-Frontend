@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import axios from "axios";
-import "./EditProfile.css";
+import "./EditProfile.scss";
 import { DataContext } from "../../../App";
 import apiUrl from "../../../apiConfig";
 import TeacherForm from "../../Shared/TeacherForm/TeacherForm"
@@ -125,27 +125,27 @@ if(isStudentUpdated){
   if (activeUser[0] !== undefined) {
     if (activeUser[0].teacher === true) {
       return (
-        <>
+        <div className='edit-profile-wrapper'>
           <TeacherForm handleTeacherChange={handleTeacherChange} handleTeacherSubmit={handleTeacherSubmit} teacherInput={teacherInput}/>
 
           {clickedDelete ? <Redirect to="/deleteprofile" /> : null}
           <button type="button" onClick={showDiv}>
             Delete Profile
           </button>
-        </>
+        </div>
       );
     }
 
     if (activeUser[0].student === true) {
       return (
-        <>
+        <div className='edit-profile-wrapper'>
           <StudentForm handleStudentChange={handleStudentChange} handleStudentSubmit={handleStudentSubmit} studentInput={studentInput}/>
 
           {clickedDelete ? <Redirect to="/deleteprofile" /> : null}
           <button type="button" onClick={showDiv}>
             Delete Profile
           </button>
-        </>
+        </div>
       );
     }
   } else {

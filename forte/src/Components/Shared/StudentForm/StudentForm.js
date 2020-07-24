@@ -1,4 +1,5 @@
 import React from "react";
+import "./StudentForm.scss";
 
 export default function StudentForm({
   handleStudentChange,
@@ -50,7 +51,7 @@ export default function StudentForm({
           name="other"
           value={studentInput.other}
         />
-        <input type="submit" />
+        <input type="submit" id='submit-button-wrapper' />
       </form>
     </div>
   );
